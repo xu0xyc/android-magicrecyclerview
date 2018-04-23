@@ -5,9 +5,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.vcyber.galleryrecyclerview.sample.MainActivity">
+    tools:context="com.charlie.magicrecyclerview.sample.MainActivity">
 
-    <com.vcyber.widget.MagicRecyclerView
+    <com.charlie.widget.MagicRecyclerView
         android:id="@+id/gly_recycler_view"
         android:layout_width="0dp"
         android:layout_height="0dp"

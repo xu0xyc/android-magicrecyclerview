@@ -36,9 +36,8 @@ public class MainActivity extends AppCompatActivity implements OnItemClickListen
 
         mMagicRecyclerView = (MagicRecyclerView) findViewById(R.id.gly_recycler_view);
         mMagicRecyclerView.setMarginOffset(10);
-        mMagicRecyclerView.setMinScale(1.0f);
+        mMagicRecyclerView.setMinScale(0.3f);
         mMagicRecyclerView.setFrictionFactor(0.3f);
-        mMagicRecyclerView.setMax3DRotate(-20);
         mMagicRecyclerView.scrollToPosition(5);
 
         mAdapter = new SimpleAdapter(this, Arrays.asList(titiles), this);

@@ -4,15 +4,15 @@
              android:layout_height="match_parent">
 
     <LinearLayout
-        android:layout_width="100dp"
-        android:layout_height="200dp"
+        android:layout_width="200dp"
+        android:layout_height="300dp"
         android:paddingTop="20dp"
         android:paddingBottom="20dp"
         android:layout_gravity="center_vertical"
         android:orientation="vertical"
         android:background="@color/colorPrimary">
 
-        <com.vcyber.galleryrecyclerview.widget.AlwaysMarqueeTextView
+        <com.charlie.magicrecyclerview.widget.AlwaysMarqueeTextView
             android:id="@+id/tv_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
