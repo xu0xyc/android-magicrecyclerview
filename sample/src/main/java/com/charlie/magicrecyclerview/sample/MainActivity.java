@@ -35,9 +35,19 @@ public class MainActivity extends AppCompatActivity implements OnItemClickListen
         }
 
         mMagicRecyclerView = (MagicRecyclerView) findViewById(R.id.gly_recycler_view);
+//        mMagicRecyclerView.setMarginOffset(-100);
         mMagicRecyclerView.setMarginOffset(10);
-        mMagicRecyclerView.setMinScale(0.3f);
+//        mMagicRecyclerView.setMinScale(0.3f);
+        mMagicRecyclerView.setScaleOffsetTranslation(new MagicRecyclerView.OffsetTranslation(){
+            @Override
+            public float translate(float offsetPercent) {
+                float ret = 0.85f + Math.abs(offsetPercent);
+                ret = ret > 1.0f ? 1.0f : ret;
+                return ret;
+            }
+        });
         mMagicRecyclerView.setFrictionFactor(0.3f);
+        mMagicRecyclerView.setMax3DRotate(-30);
         mMagicRecyclerView.scrollToPosition(5);
 
         mAdapter = new SimpleAdapter(this, Arrays.asList(titiles), this);

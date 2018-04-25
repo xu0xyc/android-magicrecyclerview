@@ -45,8 +45,8 @@ install {
             project {
                 packaging 'aar'
 
-                name 'Magicrecyclerview For Android'
-                description 'A custom magicrecyclerview for android.'
+                name 'MagicRecyclerView For Android'
+                description 'A custom view base on RecyclerView for android.'
                 url siteUrl
 
                 licenses {
@@ -82,13 +82,13 @@ task sourcesJar(type: Jar) {
 task javadoc(type: Javadoc) {
     source = android.sourceSets.main.java.srcDirs
     classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
-    // destinationDir = file("../javadoc/")
+    destinationDir = file("../javadoc/")
     failOnError false
 }
 
 task javadocJar(type: Jar, dependsOn: javadoc) {
-    classifier = 'javadoc'
     from javadoc.destinationDir
+    classifier = 'javadoc'
 }
 artifacts {
     archives javadocJar
