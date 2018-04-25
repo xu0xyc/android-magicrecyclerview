@@ -664,10 +664,8 @@ public class MagicRecyclerView extends RecyclerView {
         }
 
         @Override
-        public boolean requestChildRectangleOnScreen(RecyclerView parent, View child, Rect rect, boolean immediate, boolean focusedChildVisible) {
-            Log.d(TAG, "requestChildRectangleOnScreen");
-//            return super.requestChildRectangleOnScreen(parent, child, rect, immediate, focusedChildVisible);
-            return false;
+        public boolean onRequestChildFocus(RecyclerView parent, State state, View child, View focused) {
+            return true;// 禁止此RV因为内部Item请求焦点而发生滚动
         }
 
     }
